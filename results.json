@@ -1,5 +1,20 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T19:18:39Z",
-  "participants": []
+  "generated_at": "2026-09-30T19:20:04Z",
+  "participants": [
+    {
+      "name": "Khaotic",
+      "updated_at": "2026-09-30T19:20:04Z",
+      "scores": {
+        "double_star": 11,
+        "line_with_lift": 4,
+        "free_draw": 21933
+      },
+      "deltas": {
+        "double_star": 11,
+        "line_with_lift": 4,
+        "free_draw": 21933
+      }
+    }
+  ]
 }
