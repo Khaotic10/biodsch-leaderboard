@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Текущие результаты экспериментов БиоДСЧ">
+  <meta name="theme-color" content="#007f78">
+  <title>Результаты экспериментов БиоДСЧ</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#double_star" aria-label="БиоДСЧ — к таблицам результатов">
+        <span class="brand-mark" aria-hidden="true">Б</span>
+        <span>БиоДСЧ</span>
+      </a>
+      <div class="freshness" aria-live="polite">
+        <span class="freshness-dot" aria-hidden="true"></span>
+        <span id="freshness">Загрузка данных…</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Экспериментальные данные</p>
+        <h1 id="page-title">Таблицы лидеров</h1>
+        <p class="intro-copy">Результаты обновляются после проверки нового архива рабочей группой.</p>
+      </div>
+      <div class="participant-total" aria-label="Число участников">
+        <strong id="participant-count">—</strong>
+        <span id="participant-label">участников</span>
+      </div>
+    </section>
+
+    <nav class="experiment-tabs" aria-label="Выбор эксперимента" role="tablist">
+      <button class="tab active" id="tab-double_star" type="button" role="tab" aria-selected="true" aria-controls="leaderboard" data-experiment="double_star">
+        <span class="tab-number">01</span>
+        <span><strong>Двойная звезда</strong><small>траектории</small></span>
+      </button>
+      <button class="tab" id="tab-line_with_lift" type="button" role="tab" aria-selected="false" aria-controls="leaderboard" data-experiment="line_with_lift">
+        <span class="tab-number">02</span>
+        <span><strong>Линия с отрывом</strong><small>траектории</small></span>
+      </button>
+      <button class="tab" id="tab-free_draw" type="button" role="tab" aria-selected="false" aria-controls="leaderboard" data-experiment="free_draw">
+        <span class="tab-number">03</span>
+        <span><strong>Свободное ведение</strong><small>точки</small></span>
+      </button>
+    </nav>
+
+    <section class="leaderboard" id="leaderboard" role="tabpanel" aria-labelledby="tab-double_star" tabindex="0">
+      <div class="board-heading">
+        <div>
+          <p class="eyebrow" id="board-kind">Количество траекторий</p>
+          <h2 id="board-title">Двойная звезда</h2>
+        </div>
+        <p class="board-note" id="board-note">Завершённые касания с событием UP или CANCEL</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="rank-column">Место</th>
+              <th scope="col">Участник</th>
+              <th scope="col" class="numeric">Результат</th>
+              <th scope="col" class="numeric">Изменение</th>
+              <th scope="col">Обновлено</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+        <div class="state-message" id="state-message" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>На странице публикуются псевдонимы и суммарные результаты. Исходные координаты здесь не размещаются.</p>
+  </footer>
+</body>
+</html>
+
